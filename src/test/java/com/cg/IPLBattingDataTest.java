@@ -42,4 +42,10 @@ public void initialize() throws IPLException {
 		Assert.assertEquals("Ishant Sharma", sortedList.get(100).getPlayer());
 	}
 	
+	@Test
+	public void givenBattingData_shouldReturnMaxSixesAndFours() {
+		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.MAX_SIXES_AND_FOURS);
+		Assert.assertEquals("Andre Russell", sortedList.get(100).getPlayer());
+	}
+	
 }
