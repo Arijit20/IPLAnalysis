@@ -36,4 +36,10 @@ public void initialize() throws IPLException {
 		Assert.assertEquals("MS Dhoni", sortedList.get(100).getPlayer());
 	}
 	
+	@Test
+	public void givenBattingData_shouldReturnTopStrikingRate() {
+		sortedList = iplAnalyser.sortBattingData(battingList, BattingDataSorter.TOP_STRIKING_RATE);
+		Assert.assertEquals("Ishant Sharma", sortedList.get(100).getPlayer());
+	}
+	
 }
