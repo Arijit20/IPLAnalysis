@@ -75,7 +75,7 @@ public class IPLBatting {
 	}
 
 	public double getAverage() {
-		if(average == "-") return 0.0;
+		if(average.equals("-")) return 0.0;
 		return Double.parseDouble(average);
 	}
 
