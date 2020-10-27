@@ -28,7 +28,6 @@ public class IPLAnalyser {
 	
 	public List<IPLAllRounder> sortAllRounderData(List<IPLBatting> battingList, List<IPLBowling> bowlingList, Comparator<IPLAllRounder> comparator){
 		List<IPLAllRounder> allRounderList = getAllRounderPlayers( battingList, bowlingList);
-		Collections.reverse(allRounderList);
 		return (List<IPLAllRounder>) allRounderList.stream().sorted(comparator).collect(Collectors.toList());
 	}
 
