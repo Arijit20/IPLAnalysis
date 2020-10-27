@@ -16,4 +16,6 @@ public class BattingDataSorter {
     public static Comparator<IPLBatting> AVG_WITH_BEST_SR = TOP_BATTING_AVG.thenComparing(IPLBatting::getStrikeRate);
 
     public static Comparator<IPLBatting> MAX_RUN_WITH_BEST_AVG = Comparator.comparing(IPLBatting::getRuns).thenComparing(TOP_BATTING_AVG );
+
+    public static Comparator<IPLBatting> MAX_HUNDRED_WITH_BEST_AVG = Comparator.comparing(IPLBatting::getCentury).thenComparing(TOP_BATTING_AVG);
 }
