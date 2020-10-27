@@ -12,4 +12,6 @@ public class BowlingDataSorter {
 	public static Comparator<IPLBowling> TOP_ECONOMY_RATE = Comparator.comparing(IPLBowling::getEconomy);
 	
 	public static Comparator<IPLBowling> TOP_SR_WITH_5W_AND_4W = TOP_BOWLING_STRIKE_RATE.thenComparing(bowler -> bowler.getFiveWickets()+bowler.getFourWickets());
+
+    public static Comparator<IPLBowling> TOP_AVG_WITH_BEST_SR = TOP_BOWLING_AVG.thenComparing(IPLBowling::getStrikeRate);
 }
