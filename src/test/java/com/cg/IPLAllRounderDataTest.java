@@ -1,6 +1,7 @@
 package com.cg;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.junit.Before;
@@ -35,6 +36,14 @@ public class IPLAllRounderDataTest {
 	@Test
 	public void givenBattingAndBowlingData_ShouldReturnBestAvg() {
 		sortedList = iplAnalyser.sortAllRounderData(battingList, bowlingList, AllRounderDataSorter.BEST_BATTING_AND_BOWLING_AVG);
-	   Assert.assertEquals("Harpreet Brar", sortedList.get(0).getPlayer());
+		Collections.reverse(sortedList);
+		Assert.assertEquals("Krishnappa Gowtham", sortedList.get(0).getPlayer());
+	}
+	
+	@Test
+	public void givenBattingAndBowlingData_ShouldReturnBestAllRounder() {
+		sortedList = iplAnalyser.sortAllRounderData(battingList, bowlingList, AllRounderDataSorter.BEST_ALL_ROUNDER);
+	    Collections.reverse(sortedList);
+		Assert.assertEquals("Andre Russell", sortedList.get(0).getPlayer());
 	}
 }
