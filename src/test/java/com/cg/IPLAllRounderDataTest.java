@@ -37,13 +37,13 @@ public class IPLAllRounderDataTest {
 	public void givenBattingAndBowlingData_ShouldReturnBestAvg() {
 		sortedList = iplAnalyser.sortAllRounderData(battingList, bowlingList, AllRounderDataSorter.BEST_BATTING_AND_BOWLING_AVG);
 		Collections.reverse(sortedList);
-		Assert.assertEquals("Krishnappa Gowtham", sortedList.get(0).getPlayer());
+		Assert.assertEquals("Marcus Stoinis", sortedList.get(0).getPlayer());
 	}
 	
 	@Test
 	public void givenBattingAndBowlingData_ShouldReturnBestAllRounder() {
 		sortedList = iplAnalyser.sortAllRounderData(battingList, bowlingList, AllRounderDataSorter.BEST_ALL_ROUNDER);
 	    Collections.reverse(sortedList);
-		Assert.assertEquals("Andre Russell", sortedList.get(0).getPlayer());
+		Assert.assertEquals("Hardik Pandya", sortedList.get(0).getPlayer());
 	}
 }
